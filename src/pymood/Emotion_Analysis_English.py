@@ -1,11 +1,15 @@
 import pickle
+import os
 
 def load_model_and_vectorizer():
+    # 파일을 정대경로로 불러오면 에러가 나서 os를 이용해 동적으로 불러옴
+    base_path = os.path.dirname(os.path.abspath(__file__))
+
     # 학습한 모델을 저장한 파일 불러오기
-    model_path = 'pymood/emoji_model'
+    model_path = os.path.join(base_path,'emoji_model')
     
     # 문자를 벡터화한 파일 불러오기
-    vectorizer_path = 'pymood/text_vectorizer'
+    vectorizer_path = os.path.join(base_path,'text_vectorizer')
 
     with open(model_path, 'rb') as model_file:
         model = pickle.load(model_file)
