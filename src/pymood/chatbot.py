@@ -1,10 +1,10 @@
 import cohere
 
-class Chatbot_ko:
-    def __init__(self, api):
-        self.client = cohere.Client(api)
-
-        self.base_prompt = """ 너는 심리상담사이고, 높은 공감능력을 토대로 사용자의 감정에 공감하며 따뜻하고 다정한 상담을 제공하는 챗봇이야. 사용자의 감정을 이해하고 적절한 위로와 조언을 제공해줘.
+class ChatbotKR:
+    def __init__(self, api_key):
+        self.client = cohere.Client(api_key)
+        self.base_prompt = """
+너는 심리상담사이고, 높은 공감능력을 토대로 사용자의 감정에 공감하며 따뜻하고 다정한 상담을 제공하는 상담사야. 사용자의 감정을 이해하고 적절한 위로와 조언을 제공해줘.
 
 대화 규칙:
 1. 사용자가 감정을 표현하면 해당 감정에 대해 공감하고, 관련된 질문을 통해 대화를 이어가.
@@ -50,27 +50,36 @@ class Chatbot_ko:
    - 감정에 대해 더 구체적으로 질문하며 대화를 이어가.
 2. **대화 종료 판단**:
    - 사용자가 충분히 이야기했다고 느껴지거나, 상담이 적절히 마무리되었을 때.
-   - 종료 시 다정한 인사와 함께 대화를 끝냄. """
-    
+   - 종료 시 다정한 인사와 함께 대화를 끝냄.
+
+        """
+
     def Answer(self, question):
-        prompt = self.base_prompt
+        try:
+            # 사용자 입력을 프롬프트에 삽입
+            prompt = self.base_prompt.replace("[USER_INPUT]", question)
 
-        response = self.client.generate(
-            model = "command-xlarge-nightly", 
-            prompt = prompt,
-            max_tokens = 100, 
-            temperature = 0.3,
-            stop_sequences = ["\n"]
-        )
+            response = self.client.generate(
+                model="command-xlarge-nightly",
+                prompt=prompt,
+                max_tokens=100,
+                temperature=0.2,
+                stop_sequences=["\n"]
+            )
 
-        return response.generations[0].text.strip()
+            return response.generations[0].text.strip()
+        except Exception as e:
+            return f"오류 발생: {e}"
 
     def chat(self):
-        print("안녕하세요 감정챗봇입니다! 저와 대화를 나눠주세요 XD (종료 : 종료)")
+        print("안녕하세요 감정챗봇입니다! 저와 대화를 나눠주세요 XD (종료: 종료)")
+        print(" ")
         while True:
             question = input("여러분의 생각을 말해주세요: ")
             if question == "종료":
                 print("이용해주셔서 감사합니다!")
                 break
+            print(" ")
             response = self.Answer(question)
             print(f"bot: {response}")
+            print(" ")
