@@ -8,7 +8,6 @@ oss_project documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    usage
 
@@ -27,16 +26,3 @@ Installation
 ------------
 blah blah
 
-Creating recipes
-----------------
-
-To analyze the emotion contained in a sentence in English, 
-you can use ``pymood.anlaysis_emotion()`` function:
-
-.. py:function:: pymood.anlaysis_emotion(kind = String)
-   
-   Return a emoji.
-
-   :param kind: Component of type string
-   :return: The ingredients string
-   :rtype: str
