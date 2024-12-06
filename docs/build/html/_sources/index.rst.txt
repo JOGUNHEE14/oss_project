@@ -3,14 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-oss_project documentation
-=========================
-
-.. toctree::
-   :maxdepth: 2
-
-   usage
-
 Overview
 ========
 
@@ -19,10 +11,10 @@ This is the pymood package available in pyhon.
 The pymood package analyzes emotions based on text input. 
 And you can also talk to chatbots.
 
-Usage
-=====
 
-Installation
-------------
-blah blah
+oss_project documentation
+=========================
+.. toctree::
+
+   usage
 
