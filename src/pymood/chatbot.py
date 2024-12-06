@@ -1,6 +1,6 @@
 import cohere
 
-class ChatbotKR:
+class Chatbot:
     def __init__(self, api_key):
         self.client = cohere.Client(api_key)
         self.base_prompt = """
@@ -49,6 +49,7 @@ class ChatbotKR:
    - 사용자의 말투나 단어 선택에서 감정의 강도를 파악하고, 이에 맞게 공감의 표현을 조절해.
    - 예: "정말 힘드셨겠어요.", "많이 속상하셨을 것 같아요." 등의 문장을 활용.
 
+
 2. **현실적인 조언 제공**:
    - 사용자의 감정에 대해 공감한 후, 그 감정을 해소하거나 대처할 수 있는 구체적인 방안을 제안해.
    - 예: "어떤 점이 특히 힘들었는지 한 번 정리해 보세요.", "깊게 생각하기 전에 잠시 산책을 해보는 건 어떨까요?"
@@ -83,6 +84,8 @@ B:
             return response.generations[0].text.strip()
         except Exception as e:
             return f"오류 발생: {e}"
+
+
 
 
 
