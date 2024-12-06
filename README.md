@@ -6,7 +6,7 @@ The pymood package analyzes emotions based on text input and can also interact w
   + For Korean input, it returns an emoji that matches the sentiment.
   + Example: "기분이 좋아요!" → 😊
   + For English input, it also returns an emoji that represents the sentiment.
-  + Example: "I am feeling great!" → 😊
+  + Example: "I feel good!" → 😊
     
 + **Emotion-Based Chat Bot**
   + Responds to emotion-related input with empathetic and engaging replies.
