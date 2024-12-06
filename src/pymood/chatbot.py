@@ -1,6 +1,6 @@
 import cohere
 
-class ChatbotKR:
+class Chatbot:
     def __init__(self, api_key):
         self.client = cohere.Client(api_key)
         self.base_prompt = """
@@ -70,7 +70,6 @@ B:
 
     def Answer(self, question):
         try:
-            # 사용자 입력을 프롬프트에 삽입
             prompt = self.base_prompt.replace("[USER_INPUT]", question)
 
             response = self.client.generate(
@@ -84,5 +83,3 @@ B:
             return response.generations[0].text.strip()
         except Exception as e:
             return f"오류 발생: {e}"
-
-

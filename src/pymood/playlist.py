@@ -5,8 +5,8 @@ from googleapiclient.discovery import build  # 유튜브 API 사용
 class EmotionPredictor:
     def __init__(self):
         # 클래스 내부에서 모델과 벡터화기를 직접 로드
-        self.model_path = 'emotion_for_playlist_model.sav'
-        self.vectorizer_path = 'vectorizer_for_playlist.sav'
+        self.model_path = 'data\emotion_for_playlist_model.sav'
+        self.vectorizer_path = 'data\vectorizer_for_playlist.sav'
         
         with open(self.model_path, 'rb') as model_file:
             self.model = pickle.load(model_file)
