@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "pymood"
+name = "pymoood"
 version = "0.0.1"
 authors = [
   { name="oss_project", email="arijo2123@hanyang.ac.kr" },

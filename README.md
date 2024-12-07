@@ -1,5 +1,5 @@
 # OSS_PROJECT
-oss_project oss_project is a Python project that includes the pymood package. 
+oss_project is a Python project that includes the pymood package. 
 The pymood package analyzes emotions based on text input and can also interact with chatbots.
 ## Features
 + **Text-to-Emoji Conversion**
@@ -13,7 +13,10 @@ The pymood package analyzes emotions based on text input and can also interact w
   + Example: "오늘 기분이 안 좋아." → "힘드실 것 같네요. 버티는 것만으로도 잘하고 계시네요!"
     
 + **Profanity Filtering**
+  + Replace parts with profanity with *.
+  + Example : "아 씨발" -> "아 **"
 
 ## Installation
-+ To be added
+[pypi site link](https://pypi.org/project/pymoood)
++ pip install pymoood
 
