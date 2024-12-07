@@ -1,0 +1,3 @@
+include src/emotion_mlp_model.sav
+include src/emotion_vectorizer.pkl
+include src/emotion_label_encoder.pkl
