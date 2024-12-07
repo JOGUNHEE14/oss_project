@@ -14,7 +14,7 @@ def filter_profanity(text, bad_words):
     return text
 
 # 욕설 리스트 파일 경로
-bad_words_file = "../../data/badword_lsit.txt"  
+bad_words_file = "badword_lsit.txt"  
 
 # 욕설 목록 로드
 bad_words = load_bad_words(bad_words_file)
