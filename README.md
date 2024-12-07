@@ -17,6 +17,6 @@ The pymood package analyzes emotions based on text input and can also interact w
   + Example : "아 씨발" -> "아 **"
 
 ## Installation
-[pypi site link](https://pypi.org/project/pymoood/0.0.1/)
-+ pip install pymoood==0.0.1
+[pypi site link](https://pypi.org/project/pymoood)
++ pip install pymoood
 
