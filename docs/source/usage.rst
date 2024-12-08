@@ -15,6 +15,6 @@ This function analyzes the mood of sentences collected in English and
 returns emoticons that fit the situation.
 
 .. autofunction:: pymood.analysis_emotion 
-
+.. autofunction:: pymood.sentence_emotion
 
 
