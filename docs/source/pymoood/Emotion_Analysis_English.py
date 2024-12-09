@@ -21,4 +21,4 @@ def analysis_emotion(kind: str):
         - 😵 : 혼란
 
     """
-
+    return str

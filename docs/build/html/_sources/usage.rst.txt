@@ -9,7 +9,7 @@ analysis_emotion 모듈
 이 모듈은 영어로 이루어진 문장을 기반으로 분위기에 알맞은 이모티콘을
 리턴하는 모듈입니다.
 
-.. autofunction:: pymoood.analysis_emotion 
+.. autofunction:: pymoood.analysis_emotion
 
 -------------
 

@@ -36,55 +36,191 @@
 <h1>Useage<a class="headerlink" href="#useage" title="Link to this heading">¶</a></h1>
 <section id="creating-recipes">
 <h2>Creating recipes<a class="headerlink" href="#creating-recipes" title="Link to this heading">¶</a></h2>
-<p>To analyze the emotion contained in a sentence in English,
-you can use <code class="docutils literal notranslate"><span class="pre">pymoood.anlaysis_emotion()</span></code> function
-This function analyzes the mood of sentences collected in English and
-returns emoticons that fit the situation.</p>
+<p>analysis_emotion 모듈</p>
+<p>이 모듈은 영어로 이루어진 문장을 기반으로 분위기에 알맞은 이모티콘을
+리턴하는 모듈입니다.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="pymoood.analysis_emotion">
-<span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">analysis_emotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind=&lt;class</span> <span class="pre">'str'&gt;</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.analysis_emotion" title="Link to this definition">¶</a></dt>
-<dd><section id="prameters">
-<h3>Prameters<a class="headerlink" href="#prameters" title="Link to this heading">¶</a></h3>
-<dl class="simple">
-<dt><strong>Kind</strong><span class="classifier">str</span></dt><dd><p>Enter the sentence to analyze the emotion of the string type.
-sentences should be in English.</p>
-</dd>
-</dl>
-<dl class="field-list simple">
-<dt class="field-odd">returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>emoji kinds:</p>
-<ul class="simple">
-<li><p>😞 : sadness, disppointment</p></li>
-<li><p>😊 : happiness</p></li>
-<li><p>😌 : calmness, relief</p></li>
-<li><p>😠 : angry</p></li>
-<li><p>😟 : worry, anxiety</p></li>
-<li><p>😵 : confusion</p></li>
-</ul>
-</dd>
-<dt class="field-even">rtype<span class="colon">:</span></dt>
-<dd class="field-even"><p>**str**</p>
-</dd>
-</dl>
-</section>
-</dd></dl>
+<dt class="sig sig-object py" id="pymood.analysis_emotion">
+<span class="sig-prename descclassname"><span class="pre">pymood.</span></span><span class="sig-name descname"><span class="pre">analysis_emotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymood.analysis_emotion" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
 
-<p>The <code class="docutils literal notranslate"><span class="pre">pymoood.EmotionPredictor</span></code> class is used to predict
-the emotion of a given text and return the corresponding emoji.</p>
-<dl class="py function">
+<hr class="docutils" />
+<p>sentence_emotion 모듈</p>
+<p>이 모듈은 한국어로 이루이진 문장을 이용해 분위기에 맞는 감정과 이모티콘을
+출리턴하는 모듈입니다.</p>
+<dl class="py class">
 <dt class="sig sig-object py" id="pymoood.EmotionPredict">
-<span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">EmotionPredict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorizer_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.EmotionPredict" title="Link to this definition">¶</a></dt>
-<dd><p>The EmotionPredictor class is used to predict the emotion of a given text
-and return the corresponding emoji.</p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">EmotionPredict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorizer_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.EmotionPredict" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>EmotionPredictor 클래스를 사용하여 텍스트의 감정을 예측하고 해당 이모티콘을 반환합니다.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>model_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the trained model file. Default is ‘emotion_mlp_model.sav’ within the package.</p></li>
-<li><p><strong>vectorizer_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the CountVectorizer file. Default is ‘emotion_vectorizer.pkl’ within the package.</p></li>
-<li><p><strong>label_encoder_path</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to the LabelEncoder file. Default is ‘emotion_label_encoder.pkl’ within the package.</p></li>
+<li><p><strong>model_path</strong> (<em>str</em><em>, </em><em>optional</em>) – 학습된 모델 파일의 경로. 기본값은 패키지 내부의 ‘emotion_mlp_model.sav’.</p></li>
+<li><p><strong>vectorizer_path</strong> (<em>str</em><em>, </em><em>optional</em>) – CountVectorizer 파일의 경로. 기본값은 패키지 내부의 ‘emotion_vectorizer.pkl’.</p></li>
+<li><p><strong>label_encoder_path</strong> (<em>str</em><em>, </em><em>optional</em>) – LabelEncoder 파일의 경로. 기본값은 패키지 내부의 ‘emotion_label_encoder.pkl’.</p></li>
 </ul>
 </dd>
 </dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pymoood.EmotionPredict.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pymoood.EmotionPredict.predict" title="Link to this definition">¶</a></dt>
+<dd><p>입력 텍스트의 감정을 예측하고 해당 이모티콘을 반환합니다.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – 감정을 예측할 텍스트.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>예측된 감정과 해당 이모티콘.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">predictor</span> <span class="o">=</span> <span class="n">EmotionPredictor</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;I am so happy today!&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">예측된 감정: 기쁨, 이모티콘: 😊</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<p>chatbot 모듈</p>
+<p>이 모듈은 감정 상담 기능을 제공하는 ChatbotKR 클래스를 포함합니다.
+Cohere API를 사용하여 사용자 입력에 따라 감정을 분석하고 응답을 생성합니다.
+여러가지 LLM중에서 한달에 무조건 무료로 1000채팅을 사용할 수 있다는 강점이 있어 Cohere의 Commad r+를 선택하였습니다.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymoood.ChatbotKR">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">ChatbotKR</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.ChatbotKR" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>ChatbotKR 클래스</p>
+<p>감정 기반 상담 챗봇을 구현하는 클래스입니다. 사용자가 입력한 내용에 적절한 응답을 생성해줍니다.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymoood.ChatbotKR.client">
+<span class="sig-name descname"><span class="pre">client</span></span><a class="headerlink" href="#pymoood.ChatbotKR.client" title="Link to this definition">¶</a></dt>
+<dd><p>Cohere 클라이언트 객체.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>cohere.Client</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymoood.ChatbotKR.base_prompt">
+<span class="sig-name descname"><span class="pre">base_prompt</span></span><a class="headerlink" href="#pymoood.ChatbotKR.base_prompt" title="Link to this definition">¶</a></dt>
+<dd><p>대화의 맥락과 규칙 예시대화를 작성해서 답변의 방향을 잡아주는 프롬프트</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymoood.ChatbotKR.Answer">
+<span class="sig-name descname"><span class="pre">Answer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">question</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.ChatbotKR.Answer" title="Link to this definition">¶</a></dt>
+<dd><p>사용자의 입력에 기반하여 상담 응답을 생성합니다.</p>
+<p>Cohere API를 호출하여 텍스트 생성 요청을 수행합니다.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>question</strong> (<em>str</em>) – 사용자가 입력한 질문 또는 메시지.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>생성된 답변 문장.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<hr class="docutils" />
+<p>Playlist 모듈</p>
+<p>이 모듈은 감정 예측 및 유튜브 추천 기능을 제공합니다.
+EmotionPredictor 클래스는 텍스트 기반 감정 예측을 수행하며,
+YouTubeRecommender 클래스는 감정을 기반으로 관련 유튜브 동영상을 추천합니다.</p>
+<dl class="simple">
+<dt>클래스:</dt><dd><ul class="simple">
+<li><p>EmotionPredictor: 텍스트 데이터를 기반으로 감정을 예측하는 클래스.</p></li>
+<li><p>YouTubeRecommender: 감정 라벨을 기반으로 유튜브 동영상을 추천하는 클래스.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="pymoood.EmotionPredictor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">EmotionPredictor</span></span><a class="headerlink" href="#pymoood.EmotionPredictor" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>EmotionPredictor 클래스</p>
+<p>텍스트 데이터를 기반으로 감정을 예측하는 클래스입니다.
+학습된 감정 분류 모델과 텍스트 벡터화기를 로드하여 입력 데이터를 분석합니다.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymoood.EmotionPredictor.model_path">
+<span class="sig-name descname"><span class="pre">model_path</span></span><a class="headerlink" href="#pymoood.EmotionPredictor.model_path" title="Link to this definition">¶</a></dt>
+<dd><p>감정 분류 모델 파일 경로.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymoood.EmotionPredictor.vectorizer_path">
+<span class="sig-name descname"><span class="pre">vectorizer_path</span></span><a class="headerlink" href="#pymoood.EmotionPredictor.vectorizer_path" title="Link to this definition">¶</a></dt>
+<dd><p>텍스트 벡터화기 파일 경로.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymoood.EmotionPredictor.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#pymoood.EmotionPredictor.model" title="Link to this definition">¶</a></dt>
+<dd><p>학습된 감정 분류 모델 객체.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sklearn.base.BaseEstimator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pymoood.EmotionPredictor.vectorizer">
+<span class="sig-name descname"><span class="pre">vectorizer</span></span><a class="headerlink" href="#pymoood.EmotionPredictor.vectorizer" title="Link to this definition">¶</a></dt>
+<dd><p>텍스트를 벡터화하는 객체.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sklearn.feature_extraction.text.CountVectorizer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pymoood.EmotionPredictor.predict_emotion">
+<span class="sig-name descname"><span class="pre">predict_emotion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.EmotionPredictor.predict_emotion" title="Link to this definition">¶</a></dt>
+<dd><p>입력 텍스트에서 감정을 예측합니다.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – 분석할 사용자 입력 텍스트.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>예측된 감정 라벨. 예: “기쁨”, “슬픔”, “분노” 등.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -119,8 +255,25 @@ and return the corresponding emoji.</p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Useage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-recipes">Creating recipes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pymoood.analysis_emotion"><code class="docutils literal notranslate"><span class="pre">analysis_emotion()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pymoood.EmotionPredict"><code class="docutils literal notranslate"><span class="pre">EmotionPredict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymood.analysis_emotion"><code class="docutils literal notranslate"><span class="pre">analysis_emotion()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pymoood.EmotionPredict"><code class="docutils literal notranslate"><span class="pre">EmotionPredict</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.EmotionPredict.predict"><code class="docutils literal notranslate"><span class="pre">EmotionPredict.predict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pymoood.ChatbotKR"><code class="docutils literal notranslate"><span class="pre">ChatbotKR</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.ChatbotKR.client"><code class="docutils literal notranslate"><span class="pre">ChatbotKR.client</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.ChatbotKR.base_prompt"><code class="docutils literal notranslate"><span class="pre">ChatbotKR.base_prompt</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.ChatbotKR.Answer"><code class="docutils literal notranslate"><span class="pre">ChatbotKR.Answer()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#pymoood.EmotionPredictor"><code class="docutils literal notranslate"><span class="pre">EmotionPredictor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.EmotionPredictor.model_path"><code class="docutils literal notranslate"><span class="pre">EmotionPredictor.model_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.EmotionPredictor.vectorizer_path"><code class="docutils literal notranslate"><span class="pre">EmotionPredictor.vectorizer_path</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.EmotionPredictor.model"><code class="docutils literal notranslate"><span class="pre">EmotionPredictor.model</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.EmotionPredictor.vectorizer"><code class="docutils literal notranslate"><span class="pre">EmotionPredictor.vectorizer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pymoood.EmotionPredictor.predict_emotion"><code class="docutils literal notranslate"><span class="pre">EmotionPredictor.predict_emotion()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
