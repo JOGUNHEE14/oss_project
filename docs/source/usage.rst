@@ -16,5 +16,8 @@ returns emoticons that fit the situation.
 
 .. autofunction:: pymood.analysis_emotion 
 .. autofunction:: pymood.sentence_emotion
+.. autoclass:: pymood.playlist
+.. autoclass:: pymood.chatbot
+.. automodule:: playlist_model
 
 
