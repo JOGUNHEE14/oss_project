@@ -1,20 +1,23 @@
 Useage
 ======
 
-Installation
-------------
-blah blah
-
-
 Creating recipes
 ----------------
 
 To analyze the emotion contained in a sentence in English,
-you can use ``pymood.anlaysis_emotion()`` function
+you can use ``pymoood.anlaysis_emotion()`` function
 This function analyzes the mood of sentences collected in English and 
 returns emoticons that fit the situation.
 
-.. autofunction:: pymood.analysis_emotion 
+.. autofunction:: pymoood.analysis_emotion 
 
+
+The ``pymoood.EmotionPredictor`` class is used to predict 
+the emotion of a given text and return the corresponding emoji.
+
+.. autoclass:: pymoood.sentence_emotion.EmotionPredict
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 

@@ -71,11 +71,10 @@ sentences should be in English.</p>
 
 <p>The <code class="docutils literal notranslate"><span class="pre">pymoood.EmotionPredictor</span></code> class is used to predict
 the emotion of a given text and return the corresponding emoji.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="pymoood.sentence_emotion.EmotionPredict">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pymoood.sentence_emotion.</span></span><span class="sig-name descname"><span class="pre">EmotionPredict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorizer_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.sentence_emotion.EmotionPredict" title="Link to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>The EmotionPredictor class is used to predict the emotion of a given text
+<dl class="py function">
+<dt class="sig sig-object py" id="pymoood.EmotionPredict">
+<span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">EmotionPredict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vectorizer_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_encoder_path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.EmotionPredict" title="Link to this definition">¶</a></dt>
+<dd><p>The EmotionPredictor class is used to predict the emotion of a given text
 and return the corresponding emoji.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -86,30 +85,6 @@ and return the corresponding emoji.</p>
 </ul>
 </dd>
 </dl>
-<dl class="py method">
-<dt class="sig sig-object py" id="pymoood.sentence_emotion.EmotionPredict.predict">
-<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#pymoood.sentence_emotion.EmotionPredict.predict" title="Link to this definition">¶</a></dt>
-<dd><p>Predicts the emotion of the input text and returns the corresponding emoji.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Text for which to predict the emotion.</p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Predicted emotion and corresponding emoji.</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>str</p>
-</dd>
-</dl>
-<p class="rubric">Examples</p>
-<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">predictor</span> <span class="o">=</span> <span class="n">EmotionPredictor</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">predictor</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s2">&quot;I am so happy today!&quot;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
-<span class="go">Predicted emotion: Joy, Emoji: 😊</span>
-</pre></div>
-</div>
-</dd></dl>
-
 </dd></dl>
 
 </section>
@@ -145,10 +120,7 @@ and return the corresponding emoji.</p>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Useage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-recipes">Creating recipes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pymoood.analysis_emotion"><code class="docutils literal notranslate"><span class="pre">analysis_emotion()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pymoood.sentence_emotion.EmotionPredict"><code class="docutils literal notranslate"><span class="pre">EmotionPredict</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#pymoood.sentence_emotion.EmotionPredict.predict"><code class="docutils literal notranslate"><span class="pre">EmotionPredict.predict()</span></code></a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#pymoood.EmotionPredict"><code class="docutils literal notranslate"><span class="pre">EmotionPredict()</span></code></a></li>
 </ul>
 </li>
 </ul>

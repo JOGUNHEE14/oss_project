@@ -1,1 +1,2 @@
 from .Emotion_Analysis_English import analysis_emotion
+from .sentence_emotion import EmotionPredict

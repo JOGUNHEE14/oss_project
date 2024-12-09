@@ -15,9 +15,6 @@ returns emoticons that fit the situation.
 The ``pymoood.EmotionPredictor`` class is used to predict 
 the emotion of a given text and return the corresponding emoji.
 
-.. autoclass:: pymoood.sentence_emotion.EmotionPredict
-   :members:
-   :undoc-members:
-   :show-inheritance:
+.. autofunction:: pymoood.EmotionPredict
 
 
