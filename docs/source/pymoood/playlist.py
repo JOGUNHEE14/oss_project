@@ -1,21 +1,3 @@
-"""
-Playlist 모듈
-
-이 모듈은 감정 예측 및 유튜브 추천 기능을 제공합니다.
-EmotionPredictor 클래스는 텍스트 기반 감정 예측을 수행하며,
-YouTubeRecommender 클래스는 감정을 기반으로 관련 유튜브 동영상을 추천합니다.
-
-클래스:
-    - EmotionPredictor: 텍스트 데이터를 기반으로 감정을 예측하는 클래스.
-    - YouTubeRecommender: 감정 라벨을 기반으로 유튜브 동영상을 추천하는 클래스.
-
-"""
-
-import os
-import pickle
-from googleapiclient.discovery import build
-import webbrowser
-
 
 class EmotionPredictor:
     """

@@ -1,34 +1,3 @@
-"""
-chatbot 모듈
-
-이 모듈은 감정 상담 기능을 제공하는 ChatbotKR 클래스를 포함합니다. 
-Cohere API를 사용하여 사용자 입력에 따라 감정을 분석하고 응답을 생성합니다.
-여러가지 LLM중에서 한달에 무조건 무료로 1000채팅을 사용할 수 있다는 강점이 있어 Cohere의 Commad r+를 선택하였습니다.
-
-대화를 위한 예제코드:
-        from pymoood.chatbot import Chatbot
-
-        # Cohere API 키 설정
-        API_KEY = "Key"
-
-        # Chatbot 클래스 초기화
-        bot = Chatbot(API_KEY)
-
-        print("=== Chatbot 상담 시작 ===")
-        print("상담을 종료하려면 '종료'라고 입력하세요.")
-
-        while True:
-            user_input = input("User: ")
-            if user_input.strip() in ["종료", "exit", "quit"]:
-                print("Chatbot: 상담을 종료합니다. 좋은 하루 되세요!")
-                break
-            chatbot_response = bot.Answer(user_input)
-            print(f"Chatbot: {chatbot_response}")
-    """
-"""
-
-import cohere
-
 class ChatbotKR:
     """
     ChatbotKR 클래스
