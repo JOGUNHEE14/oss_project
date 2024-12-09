@@ -2,7 +2,7 @@ Useage
 ======
 
 Creating recipes
-----------------
+-----------------
 
 analysis_emotion 모듈
 
@@ -61,4 +61,4 @@ filter_profanity 모듈
 
 .. autofunction:: pymoood.filter_profanity
 
-
+----------

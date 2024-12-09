@@ -7,8 +7,8 @@ Overview
 ========
 
 oss_project is a python project. 
-This is the pymood package available in pyhon.
-The pymood package analyzes emotions based on text input. 
+This is the pymoood package available in pyhon.
+The pymoood package analyzes emotions based on text input. 
 And you can also talk to chatbots.
 
 

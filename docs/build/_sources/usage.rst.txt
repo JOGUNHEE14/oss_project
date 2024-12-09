@@ -2,14 +2,14 @@ Useage
 ======
 
 Creating recipes
------------------
+----------------
 
 analysis_emotion 모듈
 
 이 모듈은 영어로 이루어진 문장을 기반으로 분위기에 알맞은 이모티콘을
 리턴하는 모듈입니다.
 
-.. autofunction:: pymood.analysis_emotion
+.. autofunction:: pymoood.analysis_emotion
 
 -------------
 
@@ -52,3 +52,13 @@ YouTubeRecommender 클래스는 감정을 기반으로 관련 유튜브 동영�
    :members:
    :undoc-members:
    :show-inheritance:
+
+-----------
+
+filter_profanity 모듈
+
+이 모듈은 텍스트 내에 포함된 욕설을 필터링하는 기능을 제공합니다.
+
+.. autofunction:: pymoood.filter_profanity
+
+

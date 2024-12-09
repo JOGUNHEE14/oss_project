@@ -252,41 +252,42 @@ YouTubeRecommender 클래스는 감정을 기반으로 관련 유튜브 동영�
 <p>이 모듈은 텍스트 내에 포함된 욕설을 필터링하는 기능을 제공합니다.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pymoood.filter_profanity">
-<span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">filter_profanity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.filter_profanity" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">pymoood.</span></span><span class="sig-name descname"><span class="pre">filter_profanity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pymoood.filter_profanity" title="Link to this definition">¶</a></dt>
 <dd><p>욕설을 필터링하는 함수.</p>
 <p>주어진 텍스트에서 욕설을 필터링하여 ‘*’로 대체합니다.</p>
 <section id="id3">
 <h3>매개변수<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
 <dl class="simple">
-<dt>text<span class="classifier">str</span></dt><dd><p>욕설을 필터링할 문자열.</p>
+<dt><strong>text</strong><span class="classifier">str</span></dt><dd><p>욕설을 필터링할 문자열.</p>
 </dd>
 </dl>
 </section>
 <section id="id4">
 <h3>반환 값<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
 <dl class="simple">
-<dt>str</dt><dd><p>욕설이 ‘*’로 대체된 문자열.</p>
+<dt><strong>str</strong></dt><dd><p>욕설이 ‘*’로 대체된 문자열.</p>
 </dd>
 </dl>
 </section>
 <section id="id5">
 <h3>예외<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
 <dl class="simple">
-<dt>FileNotFoundError</dt><dd><p>badword_list.txt 파일이 존재하지 않을 경우 발생.</p>
+<dt>FileNotFoundError</dt><dd><p><cite>badword_list.txt</cite> 파일이 존재하지 않을 경우 발생.</p>
 </dd>
 </dl>
 </section>
 <section id="id6">
 <h3>구현 세부사항<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
 <ul class="simple">
-<li><p>os.path.dirname(os.path.abspath(__file__))를 사용하여 현재 파일의 디렉토리 경로를 가져옵니다.</p></li>
-<li><p>os.path.join(c_d, “badword_list.txt”)를 사용하여 욕설 목록 파일의 경로를 생성합니다.</p></li>
-<li><p>open(file_path, “r”, encoding=”utf-8”)를 사용하여 욕설 목록 파일을 읽어옵니다.</p></li>
-<li><p>re.sub(pattern, ‘*’ * len(word), text, flags=re.IGNORECASE)를 사용하여 욕설을 ‘*’로 대체합니다.</p></li>
+<li><p><a href="#id7"><span class="problematic" id="id8">``</span></a>os.path.dirname(os.path.abspath(__file__))``를 사용하여 현재 파일의 디렉토리 경로를 가져옵니다.</p></li>
+<li><p><a href="#id9"><span class="problematic" id="id10">``</span></a>os.path.join(c_d, “badword_list.txt”)``를 사용하여 욕설 목록 파일의 경로를 생성합니다.</p></li>
+<li><p><a href="#id11"><span class="problematic" id="id12">``</span></a>open(file_path, “r”, encoding=”utf-8”)``를 사용하여 욕설 목록 파일을 읽어옵니다.</p></li>
+<li><p><a href="#id13"><span class="problematic" id="id14">``</span></a>re.sub(pattern, ‘*’ * len(word), text, flags=re.IGNORECASE)``를 사용하여 욕설을 ‘*’로 대체합니다.</p></li>
 </ul>
 </section>
 </dd></dl>
 
+<hr class="docutils" />
 </section>
 </section>
 
