@@ -2,7 +2,7 @@ Useage
 ======
 
 Creating recipes
------------------
+----------------
 
 analysis_emotion 모듈
 
@@ -52,3 +52,13 @@ YouTubeRecommender 클래스는 감정을 기반으로 관련 유튜브 동영�
    :members:
    :undoc-members:
    :show-inheritance:
+
+-----------
+
+filter_profanity 모듈
+
+이 모듈은 텍스트 내에 포함된 욕설을 필터링하는 기능을 제공합니다.
+
+.. autofunction:: pymoood.filter_profanity
+
+
