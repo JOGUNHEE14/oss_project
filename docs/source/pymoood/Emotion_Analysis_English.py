@@ -1,20 +1,24 @@
-def analysis_emotion(kind = str):
+def analysis_emotion(kind: str):
     """
-   Prameters
-   ---------
-   **Kind** : str
-        Enter the sentence to analyze the emotion of the string type.
-        sentences should be in English.
+    감정을 분석하는 함수.
 
-   Returns
-   -------
-   **str**
-        emoji kinds:
+    매개변수
+    ---------
+    **kind** : str
+        감정을 분석할 문자열 유형의 문장을 입력하세요.
+        문장은 영어로 되어 있어야 합니다.
 
-        - 😞 : sadness, disppointment
-        - 😊 : happiness
-        - 😌 : calmness, relief
-        - 😠 : angry
-        - 😟 : worry, anxiety
-        - 😵 : confusion
+    반환 값
+    -------
+    **str**
+        이모티콘 종류:
+
+        - 😞 : 슬픔, 실망
+        - 😊 : 행복
+        - 😌 : 평온, 안도
+        - 😠 : 화남
+        - 😟 : 걱정, 불안
+        - 😵 : 혼란
+
     """
+

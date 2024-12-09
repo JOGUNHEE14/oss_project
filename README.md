@@ -16,6 +16,14 @@ The pymood package analyzes emotions based on text input and can also interact w
   + Replace parts with profanity with *.
   + Example : "아 씨발" -> "아 **"
 
+## dependency
+These must be downloaded before downloading the pymoood library.
+  + pip install google-api-python-client
+  + pip install cohere
+  + pip install scikit-learn
+  + pip install pandas
+
+
 ## Installation
 [pypi site link](https://pypi.org/project/pymoood)
 + pip install pymoood
