@@ -24,7 +24,7 @@ These must be downloaded before downloading the pymoood library.
   + pip install pandas
 
 ## document
-[document link] (https://oss-project.readthedocs.io/en/latest/)
+[document link](https://oss-project.readthedocs.io/en/latest/)
 
 ## Installation
 [pypi site link](https://pypi.org/project/pymoood)
